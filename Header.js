@@ -6,7 +6,7 @@ class Header extends Component {
   constructor (parentElement, text) {
     super(parentElement, "container__main-header", "h1");
     this.text = text;
-    this.element.textContent = this.text;
+    this.element.value = this.text;
   }
 
 }
