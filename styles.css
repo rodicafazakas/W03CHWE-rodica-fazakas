@@ -1,3 +1,21 @@
 body {
-  background-color: aquamarine;
+  background-color: peachpuff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pokemons-list {
+  list-style: none;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pokemons-list__pokemon-item {
+  border: 2px solid brown;
+  margin: 5px;
 }

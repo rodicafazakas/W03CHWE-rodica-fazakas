@@ -1,15 +1,17 @@
 import PokemonsService from "./PokemonsService.js";
 import Component from "./Component.js";
 import PokemonComponent from "./PokemonComponent.js";
+import Header from "./Header.js";
 
 
 
 const app = document.querySelector(".container");
 const allPokemons = document.querySelector(".pokemons-list");
 
-const services = new PokemonsService();
+const mainHeader = new Header(app, "All Pokemons");
 
-services.getService('https://pokeapi.co/api/v2/pokemon?limit=10').then(pokemons => {
+const services = new PokemonsService();
+services.getService('https://pokeapi.co/api/v2/pokemon?limit=9').then(pokemons => {
   const pokemonsResult = pokemons.results
   const allPokemonData = [];
     for (let i=0; i < pokemonsResult.length; i++) {
