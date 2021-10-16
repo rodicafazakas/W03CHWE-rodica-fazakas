@@ -5,7 +5,8 @@ class Component {
   constructor(parentElement, className, tagName ="div") {
     this.element = document.createElement(tagName);
     this.element.className = className;
-    this.parentElement.appendChild(element);
+    this.parentElement = parentElement;
+    this.parentElement.append(this.element);
   }
 
 }
