@@ -1,14 +1,22 @@
-class PokemonsService{
-  //urlAPI = "https://pokeapi.co/api/v2/pokemon?limit=151"; // url base
-  urlAPI =  'https://pokeapi.co/api/v2/pokemon?limit=100';
+class PokemonsService {
+  url =  'https://pokeapi.co/api/v2/pokemon?limit=10';
 
-  async getPokemons() {
-    const response = await fetch(this.urlAPI);
-    console.log(response);
+  async getService() {
+    const response = await fetch(this.url);
     const pokemons = await response.json();
     console.log(pokemons);
-    return pokemons;
+    const allPokemonData = await pokemons.results.foreach(async (pokemon) => getPokemonData(pokemon)); 
+
+      const getPokemonData = async function(pokemon) {
+        const response = await fetch(pokemon.url);
+        const pokemonData = await response.json;
+        console.log(pokemonData);
+        return pokemonData;
+      }
+
+    return allPokemonData;
   }// este metodo devuelve una promesa que resuelve a un array
+     
 
 }
 

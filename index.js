@@ -19,8 +19,8 @@ const pokemonList =
   }
 ];  
 
-import PokemonsService from "./PokemonsService";
+import PokemonsService from "./PokemonsService.js";
 
-const services = new PokemonsService();
-services.getPokemons();
+const services = new PokemonsService('https://pokeapi.co/api/v2/pokemon?limit=10');
+services.getService();
 
