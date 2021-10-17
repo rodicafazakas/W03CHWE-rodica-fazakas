@@ -12,10 +12,10 @@ const allPokemons = document.querySelector(".pokemons-list");
 //const mainHeader = new Header(app, "All Pokemons");
 
 
-//const Pokedex = services.createPokemon(http://localhost:3001/pokemon);
 //allPokemons.innerHTML=``;
 
 const services = new PokemonsService();
+
 let offset = 0;
 const render = (offset) => {
   services.getService(`https://pokeapi.co/api/v2/pokemon?limit=6&offset=${offset}`).then(
@@ -59,7 +59,7 @@ const backButtonHandler = () => {
 } 
 
 const addToPokedex = (event) => {
-  // const url ="http://localhost:3001/pokemon";
+  // const url ="http://localhost:4000/pokemon";
   const url ="https://pokemon-rodica-fazakas.herokuapp.com/pokemon";
 
   const addPokemonToPokedex = services.createPokemon(event.currentTarget.pokemon,url);
