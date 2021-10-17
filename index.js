@@ -59,8 +59,10 @@ const backButtonHandler = () => {
 } 
 
 const addToPokedex = (event) => {
-  const localUrl ="http://localhost:3001/pokemon";
-  const addPokemonToPokedex = services.createPokemon(event.currentTarget.pokemon,localUrl);
+  // const url ="http://localhost:3001/pokemon";
+  const url ="https://pokemon-rodica-fazakas.herokuapp.com/pokemon";
+
+  const addPokemonToPokedex = services.createPokemon(event.currentTarget.pokemon,url);
   return addPokemonToPokedex;
 }
 
