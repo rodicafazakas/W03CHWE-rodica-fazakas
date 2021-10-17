@@ -28,10 +28,13 @@ body {
   box-shadow: 0 30px 14px rga(100, 100, 100, 0.6);
 }
 
-button {
-  width: 50%;
-  margin: auto;
+.pagination {
+  width: 150px;
+  margin: 5px auto;
   cursor: pointer;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
 }
 
 .pokemon-card__save {

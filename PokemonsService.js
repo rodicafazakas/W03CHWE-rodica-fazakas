@@ -6,6 +6,17 @@ class PokemonsService {
     return pokemons;
   }
      
+  async createPokemon(pokemon, url) {
+    const response = await fetch(url, {
+      method: "POST",
+      body: JSON.stringify(pokemon),
+      headers: {
+        "Content-Type" : "application/json"
+      },
+    });
+    const newPokemon = await response.json();
+    return newPokemon;
+  }
 
 }
 
