@@ -15,7 +15,7 @@ const allPokemons = document.querySelector(".pokemons-list");
 let offset = 0;
 const render = (offset) => {
   const services = new PokemonsService();
-  services.getService('https://pokeapi.co/api/v2/pokemon?limit=6&offset=${offset}').then(
+  services.getService(`https://pokeapi.co/api/v2/pokemon?limit=6&offset=${offset}`).then(
     pokemons => {
       const pokemonsResult = pokemons.results
       for (let i=0; i < pokemonsResult.length; i++) {
@@ -38,18 +38,20 @@ const render = (offset) => {
 render(offset);
 
 const nextButtonHandler = () => {
+  allPokemons.innerHTML=``;
   offset +=6;
   render(offset);
 };
 
 const backButtonHandler = () => {
+  allPokemons.innerHTML =``;
   if (offset > 0) {
     offset -=6;
     render(offset);
   }
 } 
 
-const nextButton = new Button(app, "Next", nextButtonHandler());
-const backButton = new Button(app, "Back", backButtonHandler());
+const nextButton = new Button(app, "Next", nextButtonHandler);
+const backButton = new Button(app, "Back", backButtonHandler);
       
 

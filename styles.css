@@ -1,4 +1,5 @@
 body {
+  font-family: "Lato";
 }
 
 .container {
@@ -12,20 +13,25 @@ body {
   text-align: center;
   display: flex;
   flex-wrap: wrap;
+  align-items: space-between;
 }
 
 .pokemons-list__pokemon-item {
-  border: 2px solid brown;
+  border: 2px solid blueviolet;
   margin: 10px;
   border-radius: 30px;
   position: relative;
   padding: 10px;
-  background-color: peachpuff;
+  background-color: #eee;
+  height: 270px;
+  width: 150px;
+  box-shadow: 0 30px 14px rga(100, 100, 100, 0.6);
 }
 
 button {
   width: 50%;
   margin: auto;
+  cursor: pointer;
 }
 
 .pokemon-card__save {
@@ -43,6 +49,18 @@ button {
 .pokemon-card__img {
   background-color: cornsilk;
   border-radius: 30px;
+  max-width: 90%;
+}
+
+.pokemon-card__id {
+  background-color: cornsilk;
+  font-size: 0.9em;
+  border-radius: 50%;
+  padding: 5px 10px;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  margin: 10px auto;
 }
 
 header {
