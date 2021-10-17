@@ -11,10 +11,12 @@ pokemon;
   generateHTML () {
     const html = `
     <div class="pokemon-card">
-      <h2 class="pokemon-card__name">${this.pokemon.name}</h2>
+      <img class="pokemon-card__img" src=${this.pokemon.img} alt ="${this.pokemon.name}Image" width=150 height=150 />
+      <h3 class="pokemon-card__name">${this.pokemon.name}</h3>
       <p class="pokemon-card__type">${this.pokemon.type}</p>
       <p class="pokemon-card__id">Nº ${this.pokemon.id}<p>
-      <img class="pokemon-card__img" src=${this.pokemon.img} alt ="${this.pokemon.name}Image" width=150 height=150 />
+      <button class="pokemon-card__save" value="+"> + </button>
+      
     </div>  
     `;
     this.element.innerHTML = html;

@@ -1,5 +1,4 @@
 body {
-  background-color: peachpuff;
 }
 
 .container {
@@ -17,11 +16,50 @@ body {
 
 .pokemons-list__pokemon-item {
   border: 2px solid brown;
-  margin: 5px;
-  border-radius: 20px;
+  margin: 10px;
+  border-radius: 30px;
+  position: relative;
+  padding: 10px;
+  background-color: peachpuff;
 }
 
 button {
   width: 50%;
   margin: auto;
+}
+
+.pokemon-card__save {
+  border-radius: 50%;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  height: 25px;
+  width: 25px;
+  text-align: center;
+  border: none;
+  background-color: burlywood;
+}
+
+.pokemon-card__img {
+  background-color: cornsilk;
+  border-radius: 30px;
+}
+
+header {
+  background-color: greenyellow;
+}
+
+nav ul {
+  list-style: none;
+  display: inline-block;
+}
+
+nav ul li {
+  display: inline;
+  margin: 10px 20px;
+}
+
+a {
+  font-size: 20px;
+  text-decoration: none;
 }
